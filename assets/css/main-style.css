@@ -11,8 +11,11 @@ body{
     border-radius: 40px;
     font-size: 20px;
     font-weight: lighter ;
-    border: none;
+    border: 1px solid #28b6dd;
 
+}
+.btn-1:hover{
+    background-color: #2CA5C6;
 }
 .btn-2{
     background-color: #28b6dd;
@@ -21,7 +24,11 @@ body{
     border-radius: 40px;
     font-size: 20px;
     font-weight: lighter;
-    border: none;
+    border: 2px solid #283E71;
+}
+.btn-2:hover{
+    background-color: whitesmoke;
+    color: black;
 }
 .primary-color{
     color: #2CA5C6;
