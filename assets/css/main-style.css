@@ -109,3 +109,14 @@ body{
     line-height: 30px;
     width: 0px;
 }
+.title-slide{
+    font-size: 80px;
+    font-weight: bolder;
+}
+.subtitle-slide{
+    color: #7adfff;
+}
+
+#slider{
+    margin-top: 120px;
+}
