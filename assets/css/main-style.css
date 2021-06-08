@@ -3,8 +3,6 @@ body{
     font-family: 'Roboto Mono', monospace;
     color: #2CA5C6;
     font-size: 16px;
-    padding: 0;
-    margin:0;
     background-color: #34495e
 }
 .header{
@@ -12,6 +10,7 @@ body{
     background-color: teal;
 }
 .btn-1{
+    position: relative;
     background-image: linear-gradient(to left,#1abc9c,#9b59b6,#1abc9c);
     background-size: 200%;
     color: white;
@@ -24,7 +23,6 @@ body{
     transition: 0.3s linear;
     cursor: pointer;
     overflow: hidden;
-    position: relative;
     right: 30px;
     left: 33cm;
 }
@@ -61,11 +59,6 @@ body{
 }
 .secondary-color{
     color: #283E71;
-}
-.container{
-    position: absolute;
-    left: 0%;
-    top: 2%;
 }
 .search-box{
     position: absolute;
