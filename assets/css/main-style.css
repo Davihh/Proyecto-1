@@ -23,8 +23,6 @@ body{
     transition: 0.3s linear;
     cursor: pointer;
     overflow: hidden;
-    right: 30px;
-    left: 33cm;
 }
 .btn-1:hover{
     transform: scale(1.1);
