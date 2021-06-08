@@ -110,11 +110,19 @@ body{
     width: 0px;
 }
 .title-slide{
-    font-size: 80px;
-    font-weight: bolder;
+    font-size: 90px;
+    font-weight:bolder;
+    color: white;
+    font-style: oblique;
 }
 .subtitle-slide{
     color: #7adfff;
+}
+.letra-color{
+    color: white;
+}
+.letra-color-2{
+    color: white;
 }
 
 #slider{
@@ -125,6 +133,7 @@ body{
     margin-bottom: 30px;
 }
 .social{
+    position:relative;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -135,8 +144,15 @@ body{
     color: white;
     background-image: linear-gradient(to left,#1abc9c,#9b59b6,#1abc9c);
     border-radius: 20px;
+    border: 1px solid #28b6dd;
+    transition: 0.3s linear;
+    background-size: 200%;
 }
 
 .social a{
     color: white;
+}
+.social:hover{
+    transform: scale(1.1);
+    background-position: right;
 }
