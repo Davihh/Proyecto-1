@@ -3,11 +3,7 @@ body{
     font-family: 'Roboto Mono', monospace;
     color: #2CA5C6;
     font-size: 16px;
-    background-color: #34495e;
-    background-image: url("../images/paisaje.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
+    background-color: #283E71;
 }
 .header{
     height: 100px;
@@ -155,4 +151,13 @@ body{
 .social:hover{
     transform: scale(1.1);
     background-position: right;
+}
+.home{
+    color: #2CA5C6;
+    font-size: 16px;
+    background-color: #34495e;
+    background-image: url("../images/paisaje.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
 }
