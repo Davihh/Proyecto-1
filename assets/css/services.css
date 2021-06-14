@@ -1,0 +1,26 @@
+#our-services{
+    background-color: #2CA5C6;
+    padding: 23px;
+    color: white;
+}
+.texto-servicio{
+    font-size: 35px;
+}
+.ayuda-texto{
+    font-size: 17px;
+    margin-right: 110px;
+}
+.col-4{
+    padding: 10px;
+}
+.images{
+    cursor: pointer;
+}
+.resumen{
+    font-size: 12px;
+}
+.icon{
+    font-size: 25px;
+    padding: 0px;
+    margin-right: 8px;
+}
