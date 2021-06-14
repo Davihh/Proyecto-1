@@ -9,3 +9,16 @@
     padding: 80px;
     color: white;
 }
+.rating-number{
+    font-size: 30px ;
+}
+#who-we-are{
+    padding: 65px;
+    background-color: rgb(216, 216, 216);
+    color: black;
+}
+.info-excited{
+    background-color: black;
+    padding: 5px 10px 5px 10px;
+    font-weight: lighter;
+}
