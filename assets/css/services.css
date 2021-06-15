@@ -20,7 +20,19 @@
     font-size: 12px;
 }
 .icon{
-    font-size: 25px;
+    font-size: 35px;
     padding: 0px;
     margin-right: 8px;
+}
+.images:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+#service-line{
+    background-color: #c6ccce;
+    padding: 80px;
+    color: rgb(0, 0, 0);
+}
+.subtitle{
+    font-size: 12px;
 }

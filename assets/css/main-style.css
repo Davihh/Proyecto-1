@@ -161,3 +161,9 @@ body{
     background-size: cover;
     background-position: center top;
 }
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
