@@ -5,6 +5,16 @@ body{
     font-size: 16px;
     background-color: #283E71;
 }
+a{
+  text-decoration: none;  
+  color: rgb(128, 128, 128);
+}
+a:hover{
+    color: white;
+}
+::placeholder{
+    color: rgb(124, 124, 124) !important;
+}
 .header{
     height: 100px;
     background-color: teal;
@@ -125,8 +135,10 @@ body{
     margin-top: 120px;
 }
 #footer{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #232323;
+    color: rgb(128, 128, 128);
 }
 .social{
     position:relative;
@@ -169,4 +181,21 @@ body{
 }
 .header-1{
     background-color: rgb(27, 106, 170);
+}
+.text-news{
+    font-size: 15px;
+}
+.input-news{
+    border-color: #343A40;
+    border-radius: 50px;
+    background-color: #343A40;
+    font-size: 12px;
+    height: 50px;
+    padding-left: 25px;
+}
+.input-news:focus{
+    background-color: #343A40;
+    border-color: #79818a;
+    box-shadow: none;
+    color: white;
 }

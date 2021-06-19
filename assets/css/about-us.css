@@ -35,4 +35,7 @@
     background-color: rgb(188, 230, 255);
     color: #2CA5C6;
 }
-
+.btn-sub{
+    width: 50% !important;
+    font-size: 16px;
+}
