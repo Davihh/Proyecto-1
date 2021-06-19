@@ -1,4 +1,11 @@
-
-.google_map{
-    border-radius: 30px;
+.btn-contact{
+    width: 30% !important;
+}
+.icons{
+    font-size: 20px;
+    padding: 0px;
+    margin-right: 8px;
+}
+.message{
+    height: 340px;
 }
