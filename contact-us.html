@@ -89,8 +89,13 @@
                         </div>
                         <div class="form-group mb-3">
                             <select name="list" id="list" class="form-control"></select>
+                            <small id="error-list"></small>
                         </div>
-                        <button type="submit" id="send-form" class="btn btn-primary">Enviar formulario</button>
+                        <button type="submit" id="send-form" class="btn btn-primary">
+                            <div id="loading" class="spinner-border spinner-border-sm text-light" style="visibility: hidden" role="status">
+                            </div>
+                            Enviar formulario
+                        </button>
                     </form>
                 </div>
                 <div class="col-6 mt-5 mb-5">

@@ -13,10 +13,12 @@ function detectChange() {
     form2.addEventListener('change', e => {
         const name = form2.elements['name'].value
         const lastName = form2.elements['lastName'].value
-        if (name.length && lastName.length !== 0) {
-            disableBtn()
-        } else {
+        const list = form2.elements['list'].value
+        const captcha = form2.elements['captcha'].value
+        if (name.length && lastName.length && list.length && captcha.length !== 0) {
             enabledBtn()
+        } else {
+            disableBtn()
         }
     })
 }
@@ -33,13 +35,18 @@ function captcha() {
 }
 
 function contact() {
-    // SET disabled buttom
-    enabledBtn()
+    // SET enabled buttom
+    disableBtn()
     // FORM
     const form = document.getElementById('contact-us');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log(form.elements['name'].value);
+        disableBtn()
+        loading(true)
+        setTimeout(() => {
+            enabledBtn()
+            loading(false)
+        }, 2500)
     })
 }
 
@@ -49,13 +56,15 @@ function errors(type, value) {
             validateError(value, type, '*** Por favor coloque su nombre');
         case 'lastName':
             validateError(value, type, '*** Por favor coloque su apellido');
+        case 'list':
+            validateError(value, type, '*** Por favor seleccione una opcion');
         case 'captcha':
             validateCaptcha(value, type, '*** Por favor coloque la verificación correctamente');
     }
 }
 
 function validateError(value, type, message) {
-    if (value.length == 0) {
+    if (value.length === 0) {
         document.getElementById(`error-${type}`).innerText = message;
         document.getElementById(`error-${type}`).style.display = 'block';
     } else {
@@ -66,11 +75,11 @@ function validateError(value, type, message) {
 function validateCaptcha(value, type, message) {
     if(type === 'captcha') {
         if (Number(value) !== numberCaptcha) {
-            disableBtn()
             document.getElementById(`error-${type}`).innerText = message;
             document.getElementById(`error-${type}`).style.display = 'block';
-        } else {
             enabledBtn()
+        } else {
+            disableBtn()
             document.getElementById(`error-${type}`).style.display = 'none';
         }
     }
@@ -79,19 +88,31 @@ function validateCaptcha(value, type, message) {
 function setOptions() {
     let i;
     let optionHTML;
-    for (i = 1; i < 9; i++) {
-        optionHTML += `<option value="${i}">Opcion ${i}</option>`
+    for (i = 0; i < 9; i++) {
+        if(i === 0) {
+            optionHTML += `<option selected disabled value="">------</option>`
+        } else {
+            optionHTML += `<option value="${i}">Opcion ${i}</option>`
+        }
     }
     document.getElementById('list').innerHTML = optionHTML;
 }
 
 // HELPERS
 function disableBtn(){
-    document.getElementById('send-form').removeAttribute('disabled');
+    document.getElementById('send-form').setAttribute('disabled', true);
 }
 
 function enabledBtn() {
-    document.getElementById('send-form').setAttribute('disabled', true);
+    document.getElementById('send-form').removeAttribute('disabled');
+}
+
+function loading(value) {
+    if (value) {
+        document.getElementById('loading').style.visibility = 'visible'
+    } else {
+        document.getElementById('loading').style.visibility = 'hidden'
+    }
 }
 
 // UTILS
