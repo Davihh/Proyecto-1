@@ -2,6 +2,7 @@ let numberCaptcha = 0;
 contact()
 detectChange()
 captcha()
+setOptions()
 
 function detectChange() {
     const form = document.querySelector('#contact-us');
@@ -73,6 +74,15 @@ function validateCaptcha(value, type, message) {
             document.getElementById(`error-${type}`).style.display = 'none';
         }
     }
+}
+
+function setOptions() {
+    let i;
+    let optionHTML;
+    for (i = 1; i < 9; i++) {
+        optionHTML += `<option value="${i}">Opcion ${i}</option>`
+    }
+    document.getElementById('list').innerHTML = optionHTML;
 }
 
 // HELPERS
