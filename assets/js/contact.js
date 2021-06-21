@@ -46,6 +46,7 @@ function contact() {
         setTimeout(() => {
             enabledBtn()
             loading(false)
+            successMessage()
         }, 2500)
     })
 }
@@ -115,4 +116,10 @@ function loading(value) {
     }
 }
 
+function successMessage() {
+    document.getElementById('success-message').innerHTML = '<h3>Su mensaje ha sido enviado correctamente</h3>';
+    setTimeout(() => {
+        document.getElementById('success-message').innerHTML = '';
+    }, 2500)
+}
 // UTILS
